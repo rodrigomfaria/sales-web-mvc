@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Data;
-using static System.Formats.Asn1.AsnWriter;
+using SalesWebMvc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SalesWebMvcContext>(options =>
@@ -10,6 +9,7 @@ builder.Services.AddDbContext<SalesWebMvcContext>(options =>
     throw new InvalidOperationException("Connection string 'SalesWebMvcContext' not found.")));
 
 builder.Services.AddScoped<SeendingService>();
+builder.Services.AddScoped<SellerService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
