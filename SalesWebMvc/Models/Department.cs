@@ -16,9 +16,9 @@
             Name = name;
         }
 
-        public void AddSeler(Seller sl)
+        public void AddSeller(Seller seller)
         {
-            Sellers.Add(sl);
+            Sellers.Add(seller);
         }
 
         public double TotalSales(DateTime initial, DateTime final)
