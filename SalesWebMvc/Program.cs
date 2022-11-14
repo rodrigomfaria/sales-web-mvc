@@ -27,7 +27,7 @@ if (!app.Environment.IsDevelopment())
 
 app.Services.CreateScope().ServiceProvider.GetRequiredService<SeendingService>().Seed();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
